@@ -33,12 +33,30 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Prints schema in our model's
+gem 'annotate'
+# User management
+gem 'devise'
+# Nicer forms
+gem 'simple_form'
+# Bootstrap for styling
+gem 'bootstrap-sass', '~> 3.3.6'
+# Gets us cool glyphicons and such
+gem 'font-awesome-rails'
+# Allows for file uploads, image uploads. Get the latest release
+gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
+# Populate DB with fake data
+gem 'faker'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  # Dev tool
+  gem 'irbtools-more', require: 'irbtools/binding'
 end
 
 group :development do
